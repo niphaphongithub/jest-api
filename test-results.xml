@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.610" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-05-16T08:27:48" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Users" timestamp="2023-05-16T08:27:48" tests="0" file="C:\Users\niphaphon\Desktop\jest-api\test\users.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="POST" timestamp="2023-05-16T08:27:48" tests="1" file="C:\Users\niphaphon\Desktop\jest-api\test\users.js" time="0.579" failures="0">
+    <testcase name="Users POST /users" time="0.576" classname="/users">
+    </testcase>
+  </testsuite>
+  <testsuite name="GET" timestamp="2023-05-16T08:27:49" tests="3" file="C:\Users\niphaphon\Desktop\jest-api\test\users.js" time="1.061" failures="0">
+    <testcase name="Users GET /users" time="0.406" classname="/users">
+    </testcase>
+    <testcase name="Users GET /users/:id" time="0.240" classname="/users/:id">
+    </testcase>
+    <testcase name="Users GET /users with query params" time="0.414" classname="/users with query params">
+    </testcase>
+  </testsuite>
+  <testsuite name="PUT" timestamp="2023-05-16T08:27:50" tests="1" file="C:\Users\niphaphon\Desktop\jest-api\test\users.js" time="0.257" failures="0">
+    <testcase name="Users PUT /users/:id" time="0.257" classname="/users/:id">
+    </testcase>
+  </testsuite>
+  <testsuite name="DELETE" timestamp="2023-05-16T08:27:50" tests="1" file="C:\Users\niphaphon\Desktop\jest-api\test\users.js" time="0.280" failures="0">
+    <testcase name="Users DELETE /users/:id" time="0.280" classname="/users/:id">
+    </testcase>
+  </testsuite>
+  <testsuite name="Negative Tests" timestamp="2023-05-16T08:27:50" tests="2" file="C:\Users\niphaphon\Desktop\jest-api\test\users.js" time="0.432" failures="0">
+    <testcase name="Users Negative Tests 422 Data validation failed" time="0.277" classname="422 Data validation failed">
+    </testcase>
+    <testcase name="Users Negative Tests 401 Authentication failed" time="0.154" classname="401 Authentication failed">
+    </testcase>
+  </testsuite>
+</testsuites>

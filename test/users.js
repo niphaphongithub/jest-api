@@ -1,10 +1,9 @@
 import { expect } from "chai";
 import request from "../config/common";
+const { faker } = require('@faker-js/faker');
+require('dotenv').config();
 
-
-const TOKEN =
-  "464f78d952dc80038a5d76dc5144f6bec2a17deecc3a21d3e27ac0cdd856bf22";
-
+const TOKEN = process.env.USER_TOKEN;
 
   describe('Users', () => {
     let userId;
@@ -12,8 +11,8 @@ const TOKEN =
     describe('POST', () => {
       it('/users', () => {
         const data = {
-          email: `test-${Math.floor(Math.random() * 9999)}@mail.ca`,
-          name: 'Test name',
+          email: faker.internet.email(),
+          name: faker.person.fullName(),
           gender: 'male',
           status: 'active',
         };
@@ -23,6 +22,7 @@ const TOKEN =
           .set('Authorization', `Bearer ${TOKEN}`)
           .send(data)
           .then((res) => {
+            console.log(res.body.data)
             expect(res.body.data).to.deep.include(data);
             userId = res.body.data.id;
           });
@@ -61,7 +61,7 @@ const TOKEN =
       it('/users/:id', () => {
         const data = {
           status: 'active',
-          name: `Luffy - ${Math.floor(Math.random() * 9999)}`,
+          name: faker.internet.email(),
         };
   
         return request
@@ -100,7 +100,7 @@ const TOKEN =
     
         it('401 Authentication failed', async () => {
           const data = {
-            email: `test-${Math.floor(Math.random() * 9999)}@mail.ca`,
+            email: faker.internet.email(),
             name: 'Test name',
             gender: 'male',
             status: 'active',

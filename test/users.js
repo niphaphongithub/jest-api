@@ -1,10 +1,10 @@
-import supertest from "supertest";
-const request = supertest("https://gorest.co.in//public-api/");
-
 import { expect } from "chai";
+import request from "../config/common";
+
 
 const TOKEN =
   "464f78d952dc80038a5d76dc5144f6bec2a17deecc3a21d3e27ac0cdd856bf22";
+
 
   describe('Users', () => {
     let userId;
